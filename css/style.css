@@ -5,6 +5,11 @@ body {
 #container {
 text-align: center;
 height: 100vh;
+display: flex;
+}
+
+.left {
+  flex: 0.25;
 }
 
 #gameboard {
@@ -89,8 +94,8 @@ p{
   flex-direction: column;
   margin-top: 10px;
   margin-bottom: 10px;
-  background-color: black;
-  border-top: 10px black solid;
+  background: rgba(0,0,0,0.5);
+  border-top: 10px rgba(0,0,0,0.5) solid;
 }
 
 .inputs{
@@ -117,10 +122,15 @@ button {
 footer{
   font-family: 'Bungee Outline', cursive;
   font-size: 1em;
-  transition-duration: 1s;
+  transition-duration: 0.5s;
   margin-top: 15px;
 }
 
 footer:hover {
-  font-size: 1.5em;
+  font-family: cursive;
+}
+
+footer span:hover {
+  color: tomato;
+  transition-duration: 0.5s;
 }
