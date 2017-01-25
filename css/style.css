@@ -1,0 +1,94 @@
+body {
+  padding-bottom: 20px;
+}
+
+#container {
+text-align: center;
+height: 100vh;
+}
+
+#gameboard {
+  margin: 0 auto;
+  background-color: gray;
+  color: white;
+  border: 2px darkblue solid;
+  border-radius: 20px;
+  width: 60%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 15px 15px 15px black;
+}
+#master {
+background-color: black;
+border-top-right-radius: 20px;
+border-top-left-radius: 20px;
+}
+
+.numbers {
+  border: 2px gold solid;
+  display: flex;
+  justify-content: space-around;
+}
+#rows {
+  flex: 10;
+  /*border: 2px red solid;*/
+  min-height: 100px;
+  display: flex;
+  flex-direction: column
+}
+
+.row {
+  flex: 1;
+  min-height: 10px;
+  /*border: 1px pink solid;*/
+  display: flex;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: flex;
+}
+
+
+.box {
+  flex: 1;
+  /*border: 1px pink dotted;*/
+  display: flex;
+  justify-content: center;
+}
+
+.circle {
+  background-color: gray;
+  min-height: 10px;
+  height: 100%;
+  width: 45%;
+  border: 2px black solid;
+  border-radius: 40px;
+
+}
+.user-area {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.inputs{
+  display: flex;
+}
+
+.input{
+  flex: 1;
+  width: 15%;
+}
+
+button {
+  flex: 2;
+  background-color: yellow;
+  color: black;
+  font-weight: bold;
+  outline: none;
+  border-radius: 10px;
+  width: 200px;
+  align-self: center;
+  cursor: pointer;
+}
