@@ -9,9 +9,9 @@ height: 100vh;
 
 #gameboard {
   margin: 0 auto;
-  background-color: gray;
+  background: url('../images/matrix.jpg');
   color: white;
-  border: 2px darkblue solid;
+  border: 2px black solid;
   border-radius: 20px;
   width: 60%;
   height: 90%;
@@ -25,17 +25,36 @@ border-top-right-radius: 20px;
 border-top-left-radius: 20px;
 }
 
+h1{
+  font-family: 'Bungee Outline', cursive;
+  font-size: 3em;
+  transition-duration: 1s;
+}
+
+h1:hover {
+  font-size: 3.3em;
+}
+
+p{
+  font-size: 1.1em;
+}
+
 .numbers {
-  border: 2px gold solid;
+  background: rgba(0,0,0,0.5);
   display: flex;
   justify-content: space-around;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: white;
+  text-shadow: -1px -1px 0 black, 1px 1px 0 black;
 }
 #rows {
   flex: 10;
   /*border: 2px red solid;*/
   min-height: 100px;
   display: flex;
-  flex-direction: column
+  flex-direction: column;
+  background: rgba(0,0,0,0.5);
 }
 
 .row {
@@ -57,11 +76,11 @@ border-top-left-radius: 20px;
 }
 
 .circle {
-  background-color: gray;
+  background-color: black;
   min-height: 10px;
   height: 100%;
   width: 45%;
-  border: 2px black solid;
+  border: 2px gray solid;
   border-radius: 40px;
 
 }
@@ -70,6 +89,8 @@ border-top-left-radius: 20px;
   flex-direction: column;
   margin-top: 10px;
   margin-bottom: 10px;
+  background-color: black;
+  border-top: 10px black solid;
 }
 
 .inputs{
@@ -91,4 +112,15 @@ button {
   width: 200px;
   align-self: center;
   cursor: pointer;
+}
+
+footer{
+  font-family: 'Bungee Outline', cursive;
+  font-size: 1em;
+  transition-duration: 1s;
+  margin-top: 15px;
+}
+
+footer:hover {
+  font-size: 1.5em;
 }

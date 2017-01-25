@@ -17,3 +17,6 @@ container
         Userarea
             Inputs
             Enter
+
+at the end the Master Code lock should unlock(replace image), then the black Master Code div should fade down and reveal the master's color code. Then an overlay should appear saying You Win!
+background image: https://i.ytimg.com/vi/iLejEwXlNbE/maxresdefault.jpg
