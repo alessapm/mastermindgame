@@ -134,3 +134,8 @@ footer span:hover {
   color: tomato;
   transition-duration: 0.5s;
 }
+
+.correctSpot{
+  border : 4px aqua outset;
+  transition-duration: 1s;
+}

@@ -44,6 +44,7 @@ $(document).ready(function(){
       //   value.val() = ""
       // })
 
+
       $("input").val("");
 
       //Long version of this using EACH would be:
@@ -51,27 +52,52 @@ $(document).ready(function(){
       //   $(input).val("");
       // });
 
+      //Check for individual color matches. If color match, nothing
+      //if not color match, fade background-color back to black
 
     //check for complete win //may need to put a timeOut function
     //on this so the colors show up before the alert.
     //also obviously change the alert to an overlay or something.
-    var circlesCorrect = 0
+    var circlesCorrect = 0;
+
+
     for (var i=0; i < $userGuess.length; i++){
+
+
       if ($userGuess[i] === $master[i]){
         circlesCorrect++;
+        $($allRows[0][i]).addClass('correctSpot');
+        }
+
+      // } else {
+          //Code for using the setTimeout (here used to fade back to black)
+        // var fadedelay = function(index, row){
+        //   // console.log('i : ', index);
+        //   // console.log('element: ', $($allRows[0][index]))
+        //   console.log('All Rows: ', $allRows);
+        //   $(row[index]).css({
+        //     'background-color': 'black'
+        //   });
+        // };
+
+        // setTimeout(fadedelay.bind(null, i, $allRows[0]), 1000);
+
+        // fadedelay(i);
+      // }
+
       };
       if (circlesCorrect >= 4){
         alert('You Win!');
-      }
-    }
+      };
+
 
     //two things have to be reset: the userGuess array and
-    //the rows[0]. rows.shift() establishes new row[0]
+    //the rows[0]. $allRows.shift() establishes new row[0]
 
-    userGuess = [];
-    rows.shift();
+    $userGuess = [];
+    $allRows.shift();
       // then if rows.length === 0, YOU LOSE
-      if(rows.length === 0){
+      if($allRows.length === 0){
         alert('you lose, haha');
       }
 
