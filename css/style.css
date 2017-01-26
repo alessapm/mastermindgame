@@ -1,5 +1,6 @@
 body {
   padding-bottom: 20px;
+  padding-right: 10px;
 }
 
 #container {
@@ -138,4 +139,44 @@ footer span:hover {
 .correctSpot{
   border : 4px aqua outset;
   transition-duration: 1s;
+}
+
+.win-overlay{
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  height: 90%;
+  width: 100%;
+  z-index: 5;
+  background-color: rgba(10,100,205,.9);
+  color: white;
+  font-size: 6em;
+  text-align: center;
+  padding-top: 100px;
+  transition-duration: 1s;
+  cursor: pointer;
+}
+.lose-overlay{
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  height: 90%;
+  width: 100%;
+  z-index: 5;
+  background-color: rgba(200,1,50,.9);
+  color: white;
+  font-size: 6em;
+  text-align: center;
+  padding-top: 100px;
+  transition-duration: 1s;
+  cursor: pointer;
+}
+
+@media(max-width: 700px){
+  h1{
+    font-size: 1em;
+  };
+  #container{
+    flex-direction: column;
+  }
 }

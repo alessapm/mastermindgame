@@ -2,7 +2,15 @@
 
 $(document).ready(function(){
 
-  var $master = ['yellow','purple','white','green'];
+  var colorList = ['red', 'orange', 'yellow','green','blue', 'purple', 'white'];
+  var $master = [];
+
+
+  for (var clor = 0; clor < 4; clor++){
+    $master.push(colorList[Math.floor(Math.random()*colorList.length)]);
+  }
+  console.log('master is now: ' + $master);
+
   var $userI1 = $('#input1');
   var $userI2 = $('#input2');
   var $userI3 = $('#input3');
@@ -86,8 +94,14 @@ $(document).ready(function(){
       // }
 
       };
+
+      //WIN STATE:
       if (circlesCorrect >= 4){
-        alert('You Win!');
+        $('#master').fadeOut(2000);
+        var timeToOverlay= window.setTimeout(function(){
+          $('#overlay').addClass('win-overlay');
+        $('#overlay').text('You Win!!!')
+      }, 1900)
       };
 
 
@@ -98,11 +112,17 @@ $(document).ready(function(){
     $allRows.shift();
       // then if rows.length === 0, YOU LOSE
       if($allRows.length === 0){
-        alert('you lose, haha');
+        var timeToOverlay= window.setTimeout(function(){
+          $('#overlay').addClass('lose-overlay');
+        $('#overlay').text('You Lose!')
+      }, 500)
       }
 
 
   }); //This bracket ends the click event
-
+    $('#overlay').on('click', function(){
+    $('#overlay').removeClass();
+    $('#overlay').text('');
+  });
 
 })
