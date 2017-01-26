@@ -44,11 +44,7 @@ $(document).ready(function(){
       //   $(value).val() = ""
       // })
 
-    //change the color of the first row on click
-    // $('.first .box .circle').css({
-    //   'background-color' : $('#input1').val()
-    // }); //match colors from inputs to background-color of
-    //the array rows[0];
+
 
     //check for complete win
     var circlesCorrect = 0
