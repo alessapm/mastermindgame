@@ -41,12 +41,20 @@ $(document).ready(function(){
     };
     // reset input.vals to blank
       // $('input').each(function(value){
-      //   $(value).val() = ""
+      //   value.val() = ""
       // })
 
+      $("input").val("");
+
+      //Long version of this using EACH would be:
+      // $.each($("input"), function(index, input) {
+      //   $(input).val("");
+      // });
 
 
-    //check for complete win
+    //check for complete win //may need to put a timeOut function
+    //on this so the colors show up before the alert.
+    //also obviously change the alert to an overlay or something.
     var circlesCorrect = 0
     for (var i=0; i < $userGuess.length; i++){
       if ($userGuess[i] === $master[i]){
@@ -57,9 +65,15 @@ $(document).ready(function(){
       }
     }
 
-    //after colors applied and check for win,
-      //rows.shift() -- establishing new row[0]
+    //two things have to be reset: the userGuess array and
+    //the rows[0]. rows.shift() establishes new row[0]
+
+    userGuess = [];
+    rows.shift();
       // then if rows.length === 0, YOU LOSE
+      if(rows.length === 0){
+        alert('you lose, haha');
+      }
 
 
   }); //This bracket ends the click event
