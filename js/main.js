@@ -39,7 +39,10 @@ $(document).ready(function(){
         'background-color': $userGuess[j]
       })
     };
-    //
+    // reset input.vals to blank
+      // $('input').each(function(value){
+      //   $(value).val() = ""
+      // })
 
     //change the color of the first row on click
     // $('.first .box .circle').css({
