@@ -276,6 +276,7 @@ footer span:hover {
 
   p {
     margin: 0;
+    font-size: .8em;
   }
   #container{
     display: flex;
@@ -293,9 +294,10 @@ footer span:hover {
     font-size: .75em;
     font-family: cursive;
     color: tomato;
+    margin: 0;
   }
   #gameboard{
-    height: 80vh;
+    height: 120vh;
     width: 100%;
     flex: 3;
   }
