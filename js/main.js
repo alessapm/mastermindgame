@@ -18,7 +18,7 @@ $(document).ready(function(){
     }
     console.log('I pressed easy, master is: ' + $master);
     $('#easyOverlay').addClass('easy-overlay');
-      $('#easyOverlay').text('You have activated easy mode, the computer will now only pick from red, orange, yellow, green, blue, purple and white. Good luck!')
+      $('#easyOverlay').html('You have activated easy mode, the computer will now only pick from <span style="color:red;">red</span>, <span style="color:orange;">orange</span>, <span style="color:yellow;">yellow</span>, <span style="color:green;">green</span>, <span style="color:blue;">blue</span>, <span style="color:purple;">purple</span> and <span style="color: white; text-shadow: -1px -1px 0 black, 1px 1px 0 black, -1px -1px 0 black, 1px 1px 0 black">white</span>. Good luck!')
   })
 
 
@@ -59,6 +59,9 @@ $(document).ready(function(){
         'background-color': $userGuess[j]
       })
     };
+
+
+
     // reset input.vals to blank
       $('input').val("");
 
@@ -78,12 +81,13 @@ $(document).ready(function(){
 
     for (var i=0; i < $userGuess.length; i++){
 
-
+     // console.log('input i -' + i + '- value equals ' + $('.input')[i].val())
       if ($userGuess[i] === $master[i]){
         circlesCorrect++;
         $($allRows[0][i]).addClass('correctSpot');
         //ADD A FIXED INPUT TO THE CORRECT INPUT
-       // $('input')[i].val()= $master[i]
+        // console.log($('.inputs input').eq(i));
+        $('.inputs input').eq(i).val($master[i]);
         }
 
       // } else {
