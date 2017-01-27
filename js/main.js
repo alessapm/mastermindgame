@@ -54,7 +54,7 @@ $(document).ready(function(){
   $('#enter').on('click', function(){
     //console.log('user I1 input variable = ' + $userI1.val() + ' and the literal jQuery is ' + $('#input1').val())
     //push the 4 inputs into an array userGuess
-    $userGuess.push($userI1.val(), $userI2.val(), $userI3.val(), $userI4.val());
+    $userGuess.push($userI1.val().toLowerCase(), $userI2.val().toLowerCase(), $userI3.val().toLowerCase(), $userI4.val().toLowerCase());
 
     //assign the correct colors to correct divs
     for (var j = 0; j < $userGuess.length; j++){

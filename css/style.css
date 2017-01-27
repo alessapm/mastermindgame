@@ -307,7 +307,7 @@ footer span:hover {
   }
 
   input {
-    min-height:50px;
+    min-height:30px;
   }
   .level {
     display: none;
@@ -316,4 +316,11 @@ footer span:hover {
   #enter {
     min-height: 50px;
   }
+
+  .revealed{
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 1px;
+  left: 1px;
 }
