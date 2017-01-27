@@ -314,7 +314,7 @@ footer span:hover {
   }
 
   #enter {
-    min-height: 50px;
+    min-height: 30px;
   }
 
   .revealed{
@@ -323,4 +323,17 @@ footer span:hover {
   position: fixed;
   top: 1px;
   left: 1px;
+  }
+  .win-overlay{
+    top: 0;
+    left: 0;
+  }
+  .lost-overlay{
+    top: 0;
+    left: 0;
+  }
+  .user-area{
+    justify-content: flex-end;
+  }
 }
+
