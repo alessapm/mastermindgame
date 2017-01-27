@@ -276,6 +276,7 @@ footer span:hover {
 
   p {
     margin: 0;
+    font-size: .8em;
   }
   #container{
     display: flex;
