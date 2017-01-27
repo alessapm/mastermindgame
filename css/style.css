@@ -266,10 +266,16 @@ footer span:hover {
 
 @media(max-width: 700px){
   h1{
-    font-size: 1em;
+    font-size: 2em;
+    margin: 0;
   };
+
   h1:hover{
     font-size: 1em;
+  }
+
+  p {
+    margin: 0;
   }
   #container{
     display: flex;
@@ -279,9 +285,17 @@ footer span:hover {
     display: flex;
     flex-direction: column;
     /*flex: 0.25;*/
+    height: 10%;
+    margin: 0;
+  }
+
+  footer{
+    font-size: .75em;
+    font-family: cursive;
+    color: tomato;
   }
   #gameboard{
-    height: 90%;
+    height: 80vh;
     width: 100%;
     flex: 3;
   }
