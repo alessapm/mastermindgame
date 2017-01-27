@@ -132,10 +132,18 @@ $(document).ready(function(){
             $('#overlay').text('You Win!!!')
           }, 1900)
         } else{
+            var unlocked= window.setTimeout(function(){
+            $('#master-revealed').addClass('revealed');
+            $('#master-revealed').html("<h2>Master Code &#128275</h2><div class='box'><div class='m-circle'></div></div><div class='box'><div class='m-circle'></div></div><div class='box'><div class='m-circle'></div></div><div class='box'><div class='m-circle'></div></div>");
+              for (var q=0; q < $master.length; q++){
+                $('#master-revealed .m-circle').eq(q).css('background-color', $master[q]);
+              }
+          }, 200)
+
           var timeToOverlay= window.setTimeout(function(){
             $('#overlay').addClass('lose-overlay');
             $('#overlay').text('You Lose!')
-          }, 500)
+          }, 1200)
         }
       }
 
@@ -182,6 +190,7 @@ $(document).ready(function(){
       if ($userGuess[i] === $master[i]){
         circlesCorrect++;
         $($allRows[0][i]).addClass('correctSpot');
+        $('.inputs input').eq(i).val($master[i]);
         }
 
       // } else {
@@ -226,15 +235,26 @@ $(document).ready(function(){
             $('#overlay').text('You Win!!!')
           }, 1900)
         } else{
+          var unlocked= window.setTimeout(function(){
+            $('#master-revealed').addClass('revealed');
+            $('#master-revealed').html("<h2>Master Code &#128275</h2><div class='box'><div class='m-circle'></div></div><div class='box'><div class='m-circle'></div></div><div class='box'><div class='m-circle'></div></div><div class='box'><div class='m-circle'></div></div>");
+              for (var q=0; q < $master.length; q++){
+                $('#master-revealed .m-circle').eq(q).css('background-color', $master[q]);
+              }
+          }, 200)
+
           var timeToOverlay= window.setTimeout(function(){
             $('#overlay').addClass('lose-overlay');
             $('#overlay').text('You Lose!')
-          }, 500)
+          }, 1200)
         }
       }
     }; //this closes the if event==13
   }); //this closes the on keypress function
-
+    $('#master-revealed').on('click', function(){
+    $('#master-revealed').removeClass();
+    $('#master-revealed').html('');
+    });
 
     $('#overlay').on('click', function(){
     $('#overlay').removeClass();
