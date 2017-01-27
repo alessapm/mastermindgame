@@ -21,6 +21,10 @@ $(document).ready(function(){
       $('#easyOverlay').html('You have activated easy mode, the computer will now only pick from <span style="color:red;">red</span>, <span style="color:orange;">orange</span>, <span style="color:yellow;">yellow</span>, <span style="color:green;">green</span>, <span style="color:blue;">blue</span>, <span style="color:purple;">purple</span> and <span style="color: white; text-shadow: -1px -1px 0 black, 1px 1px 0 black, -1px -1px 0 black, 1px 1px 0 black">white</span>. Good luck!')
   })
 
+  $('#regular').on('click', function(){
+      location.reload();
+    })
+
 
 
   var $userI1 = $('#input1');
