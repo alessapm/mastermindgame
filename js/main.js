@@ -110,11 +110,10 @@ $(document).ready(function(){
 
       //WIN STATE:
       if (circlesCorrect >= 4){
-        $('h2').fadeOut(1000);
         var timeToOverlay= window.setTimeout(function(){
           $('#overlay').addClass('win-overlay');
-        $('#overlay').text('You Win!!!')
-      }, 1900)
+        $('#overlay').text('You Win!!!');
+      }, 1000)
       };
 
 
@@ -126,15 +125,16 @@ $(document).ready(function(){
       // then if rows.length === 0, YOU LOSE
       if($allRows.length === 0){
         if (circlesCorrect >=4){
-          $('h2').fadeOut(1000);
           var timeToOverlay= window.setTimeout(function(){
             $('#overlay').addClass('win-overlay');
-            $('#overlay').text('You Win!!!')
-          }, 1900)
+            $('#overlay').text('You Win!!!');
+
+          }, 1000)
+
         } else{
             var unlocked= window.setTimeout(function(){
             $('#master-revealed').addClass('revealed');
-            $('#master-revealed').html("<h2>Master Code &#128275</h2><div class='box'><div class='m-circle'></div></div><div class='box'><div class='m-circle'></div></div><div class='box'><div class='m-circle'></div></div><div class='box'><div class='m-circle'></div></div>");
+            $('#master-revealed').html("<h2>Master Code &#128275</h2><div class='box'><div class='m-circle'></div></div><div class='box'><div class='m-circle'></div></div><div class='box'><div class='m-circle'></div></div><div class='box'><div class='m-circle'></div></div><h2>     X</h2>");
               for (var q=0; q < $master.length; q++){
                 $('#master-revealed .m-circle').eq(q).css('background-color', $master[q]);
               }
@@ -143,7 +143,7 @@ $(document).ready(function(){
           var timeToOverlay= window.setTimeout(function(){
             $('#overlay').addClass('lose-overlay');
             $('#overlay').text('You Lose!')
-          }, 1200)
+          }, 2000)
         }
       }
 
@@ -213,11 +213,11 @@ $(document).ready(function(){
 
       //WIN STATE:
       if (circlesCorrect >= 4){
-        $('h2').fadeOut(2000);
         var timeToOverlay= window.setTimeout(function(){
           $('#overlay').addClass('win-overlay');
-        $('#overlay').text('You Win!!!')
-      }, 1900)
+        $('#overlay').text('You Win!!!');
+
+      }, 1000);
       };
 
 
@@ -229,15 +229,15 @@ $(document).ready(function(){
       // then if rows.length === 0, YOU LOSE
       if($allRows.length === 0){
         if (circlesCorrect >=4){
-          $('h2').fadeOut(2000);
           var timeToOverlay= window.setTimeout(function(){
             $('#overlay').addClass('win-overlay');
-            $('#overlay').text('You Win!!!')
-          }, 1900)
+            $('#overlay').text('You Win!!!');
+          }, 1000);
+
         } else{
           var unlocked= window.setTimeout(function(){
             $('#master-revealed').addClass('revealed');
-            $('#master-revealed').html("<h2>Master Code &#128275</h2><div class='box'><div class='m-circle'></div></div><div class='box'><div class='m-circle'></div></div><div class='box'><div class='m-circle'></div></div><div class='box'><div class='m-circle'></div></div>");
+            $('#master-revealed').html("<h2>Master Code &#128275</h2><div class='box'><div class='m-circle'></div></div><div class='box'><div class='m-circle'></div></div><div class='box'><div class='m-circle'></div></div><div class='box'><div class='m-circle'></div></div><h2>     X</h2>");
               for (var q=0; q < $master.length; q++){
                 $('#master-revealed .m-circle').eq(q).css('background-color', $master[q]);
               }
@@ -246,7 +246,7 @@ $(document).ready(function(){
           var timeToOverlay= window.setTimeout(function(){
             $('#overlay').addClass('lose-overlay');
             $('#overlay').text('You Lose!')
-          }, 1200)
+          }, 2000)
         }
       }
     }; //this closes the if event==13
@@ -259,6 +259,12 @@ $(document).ready(function(){
     $('#overlay').on('click', function(){
     $('#overlay').removeClass();
     $('#overlay').text('');
+    $('#playagain').removeClass('invisible');
+    $('#playagain').addClass('play-again');
     });
+
+    $('#playagain').on('click', function(){
+      location.reload();
+    })
 
 });

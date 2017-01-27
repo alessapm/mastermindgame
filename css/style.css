@@ -249,6 +249,21 @@ footer span:hover {
   border-radius: 40px;
 }
 
+.invisible{
+  display: none;
+}
+
+.play-again{
+  display:block;
+  color: white;
+  padding: 5px;
+  background-color: darkgreen;
+  border: 2px yellow outset;
+  border-radius: 10px;
+  margin-top: 2px;
+  cursor: pointer;
+}
+
 
 @media(max-width: 700px){
   h1{
