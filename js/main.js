@@ -77,9 +77,6 @@ $(document).ready(function(){
       //Check for individual color matches. If color match, nothing
       //if not color match, fade background-color back to black
 
-    //check for complete win //may need to put a timeOut function
-    //on this so the colors show up before the alert.
-    //also obviously change the alert to an overlay or something.
     var circlesCorrect = 0;
 
 

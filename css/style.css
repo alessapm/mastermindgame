@@ -264,11 +264,38 @@ footer span:hover {
 }
 
 
-@media(max-width: 700px){
+@media(max-width: 500px){
   h1{
     font-size: 1em;
   };
+  h1:hover{
+    font-size: 1em;
+  }
   #container{
+    display: flex;
     flex-direction: column;
+  }
+  #left {
+    display: flex;
+    flex-direction: column;
+  }
+  #gameboard{
+    height: 70%;
+    width: 100%;
+  }
+  .circle{
+    min-height: 30px;
+    margin: 2px;
+  }
+
+  input {
+    min-height:50px;
+  }
+  .level {
+    display: none;
+  }
+
+  #enter {
+    min-height: 50px;
   }
 }
