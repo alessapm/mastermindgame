@@ -192,19 +192,25 @@ footer span:hover {
   transition-duration: 1s;
   cursor: pointer;
 }
+
+#easy-overlay{
+  visibility: hidden;
+}
 .easy-overlay{
   position: fixed;
   top: 190px;
   left: 5px;
-  height: 12%;
+  height: 14%;
   width: 30%;
   z-index: 2;
   background-color: rgba(0,0,0, 1);
   color: white;
+  border-radius: 3px;
   font-weight: bolder;
   font-size: 1em;
   text-align: center;
   padding-top: 1px;
+
 }
 
 #masterbox{
